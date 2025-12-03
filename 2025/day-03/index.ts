@@ -17,6 +17,7 @@ function partOne() {
 
   return total;
 }
+
 function partTwo() {
   let total = 0;
 
