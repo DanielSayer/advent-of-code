@@ -86,5 +86,5 @@ function partTwo() {
 
 const partOne = getAccessibleTP;
 
-console.log("Part 1:", time(partOne));
-console.log("Part 2:", time(partTwo));
+time("Part 1", partOne);
+time("Part 2", partTwo);

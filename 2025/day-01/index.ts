@@ -1,4 +1,4 @@
-import { mod, readInput } from "../../lib/utils";
+import { mod, readInput, time } from "../../lib/utils";
 
 const INPUT = await readInput("./2025/day-01/input.txt");
 
@@ -54,7 +54,7 @@ function partTwo() {
   return numZeros;
 }
 
-console.log("Part 1:", partOne());
-console.log("Part 2:", partTwo());
+time("Part 1", partOne);
+time("Part 2", partTwo);
 
 export {};

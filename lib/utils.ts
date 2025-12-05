@@ -7,13 +7,9 @@ export function mod(n: number, m: number) {
   return ((n % m) + m) % m;
 }
 
-export function time<T>(fn: () => T) {
-  const start = Date.now();
+export function time<T>(id: string, fn: () => T) {
+  console.time(id);
   const result = fn();
-  const end = Date.now();
-
-  return {
-    result,
-    timeMs: end - start,
-  };
+  console.timeEnd(id);
+  console.log(id, result);
 }
