@@ -8,8 +8,12 @@ export function mod(n: number, m: number) {
 }
 
 export function time<T>(id: string, fn: () => T) {
-  console.time(id);
+  const t0 = Bun.nanoseconds();
   const result = fn();
-  console.timeEnd(id);
-  console.log(id, result);
+  const t1 = Bun.nanoseconds();
+  console.log({
+    id,
+    result,
+    timeMs: ((t1 - t0) / 1_000_000).toFixed(3),
+  });
 }
